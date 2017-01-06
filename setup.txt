@@ -1,0 +1,39 @@
+>hemisphere_cylinder_grid_v25hexy
+p_rans.exe
+
+  To determine the grid spacing above the wall...
+   1. Target Reynolds number = ?
+10000
+   2. Target y_plus value = ?
+0.5
+
+
+ Grid type = 1: Prismatic grid
+           = 2: Tetrahedral grid
+           = 3: Mixed grid: Tet/prism
+           = 4: Mixed grid: Prism/Hex
+ grid_type = ?
+4
+ Use b8.ugrid format for grid (T/F)= ?
+  F -> .ugrid    (formatted                   )
+  T -> .b8.ugrid (unformatted stream bigEndian)
+T
+  Ensure big Endian -> setenv F_UFMTENDIAN big
+
+ --- Location of outer boundary...
+  Distance to the outer boundary from the body = ? (e.g., 10.0)
+10.0
+ ---Number of nodes along the cylinder part = ?
+80
+  nodes_cylinder_input =           80
+
+ --- Length of the hemisphere-cylinder...
+     Apex of the hemisphere is at x=0, this is the position of
+     the end of the cylinder, which is equal to the length of HC.
+  Length of the hemisphere-cylinder = ?
+10.0
+ ***********************************************************
+  1. Triangulate the generating sector, the building block
+ ***********************************************************
+ Division of the generating sector = ?
+16
